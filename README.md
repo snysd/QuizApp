@@ -11,11 +11,63 @@
 - ユーザのDBを保持して成績を振り返ることができる。
 - ユーザ全体の成績をランキングで表示する。
 - 途中終了した場合は成績に含まない。
-## 画面案  
-### ログイン  
-![image](url)
-### ホーム  
 
+## 基本設計  
+
+### 画面一覧  
+#### ログイン  
+ユーザー名とパスワードを入力させて認証を行う。  
+![image](https://user-images.githubusercontent.com/92729088/159005805-5b825d7b-cd26-4aa1-9eec-5730df2a5572.png)
+#### アカウント作成  
+ユーザー名とパスワードを登録する画面。  
+![image](https://user-images.githubusercontent.com/92729088/159006264-c9f3803b-b5d6-4a82-90e5-5a145be6d678.png)
+#### ホーム  
+ログイン後最初に表示する画面。  
+![image](https://user-images.githubusercontent.com/92729088/159006207-d62890e9-04dd-44b5-acea-869ac88918c8.png)
+#### ゲーム画面  
+問題文を表示して回答を4択選択させる。残り時間を表示する。  
+![image](https://user-images.githubusercontent.com/92729088/159007439-79817b4c-b5c4-4233-99e9-d88dd56536a8.png)
+#### ゲーム結果  
+問題ごとのかかった時間、スコアを表示する。  
+![image](https://user-images.githubusercontent.com/92729088/159006293-b6158fc5-e93d-43c7-8b19-7f5970760d22.png)
+#### ランキング   
+全ユーザーのスコアの良い順番のリストを表示する。  
+![image](https://user-images.githubusercontent.com/92729088/159006299-15232c28-b453-4486-b22e-16ae1e91da43.png)
+#### マイスコア   
+自身のスコアの良い順番のリストを表示する。  
+![image](https://user-images.githubusercontent.com/92729088/159006303-327333e4-ea03-4515-9d39-cd7b773437b2.png)
+
+### 画面遷移  
+本アプリの画面遷移図を以下に示す。  
+![image](https://user-images.githubusercontent.com/92729088/159012712-fae4a50e-bf72-4e57-82ed-6f5cd067c678.png)
+
+
+### DB設計  
+#### ユーザDB  
+|  項目名  |  説明  |  備考  |
+| :---: | :---: | :---: |
+|  ユーザ名  |  ユーザ名  |  重複不可  |
+|  パスワード  |  パスワード  |  英数混合、4文字以上8文字以内  |
+
+#### スコアDB  
+|  項目名  |  説明  |  備考  |
+| :---: | :---: | :---: |
+|  ユーザ名  |  ユーザ名  |  重複不可  |  
+|  スコア  |  スコア  |  以下のTBLを配列で保持  |
+|  日付  |  日付  ||
+|  スコア  |  スコア  ||
+
+#### 問題DB  
+|  項目名  |  説明  |  備考  |
+| :---: | :---: | :---: |
+|  問題  |  問題  ||
+|  画像有無  |  画像を表示する場合はtrue <br>  画像がない場合はfalse||
+|  画像ID  |  画像DBのID  ||
+|  回答  |  回答  ||
+|  選択肢  |  選択肢  |  4個の選択肢を配列で保持する  |
+
+#### 画像DB  
+[gridfs](https://docs.mongodb.com/manual/core/gridfs/#:~:text=GridFS%20is%20a%20specification%20for,chunk%20as%20a%20separate%20document)で画像ファイルを保持する。
 
 
 以下未作成

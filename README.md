@@ -71,9 +71,11 @@
 [gridfs](https://docs.mongodb.com/manual/core/gridfs/#:~:text=GridFS%20is%20a%20specification%20for,chunk%20as%20a%20separate%20document)で画像ファイルを保持する。
 
 ## 処理詳細  
-### 初期化処理  
-1. イニファイルを読み込み、サーバのURLを取得する。
+
 ### ログイン  
+#### ロードイベント  
+1. イニファイルを読み込み、サーバのURLを取得する。
+
 #### ログインボタンクリック時  
 1. ユーザ名がDBにあるかサーバに問い合わせる。ある場合はユーザ情報を取得する。ない場合はnull。
 2. nullの場合、ポップアップでエラーメッセージを表示する。

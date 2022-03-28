@@ -85,7 +85,11 @@
 2. nullの場合、ポップアップでエラーメッセージを表示する。
 3. ユーザ情報があった場合は、パスワードをユーザ情報と一致するか確認する。
 4. 一致したら、ホーム画面に遷移する。不一致の場合、ポップアップでエラーメッセージを表示する。
-![image](https://user-images.githubusercontent.com/92729088/160398031-7b0ad7db-656d-4958-b62f-57fe603996e8.png)  
+・上記処理の処理シーケンスを以下に示す。 
+![image](https://user-images.githubusercontent.com/92729088/160398031-7b0ad7db-656d-4958-b62f-57fe603996e8.png) 
+・上記処理のフローチャートを以下に示す。 
+![image](https://user-images.githubusercontent.com/92729088/160403214-f40bf737-d631-412d-862e-a2c647b4beea.png)  
+
 
 #### アカウント作成ボタンクリック時  
 1. アカウント作成画面へ遷移する。  

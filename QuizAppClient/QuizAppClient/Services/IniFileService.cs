@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,7 +21,7 @@ namespace QuizAppClient.Services
         public void ReadIniFile(string iniFilePath)
         {
             var parser = new FileIniDataParser();
-            iniData = parser.ReadFile(iniFilePath);
+            if(File.Exists(iniFilePath)) iniData = parser.ReadFile(iniFilePath);
         }
     }
 }

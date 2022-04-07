@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuizAppClient.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace QuizAppClient
         public Login()
         {
             InitializeComponent();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            string IniPath = @"..\..\Settings\Ini.ini";
+            IniFileService iniFileService = new IniFileService(IniPath);
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuizAppClient
 {
-    public partial class Form2 : Form
+    public partial class CreateAccount : Form
     {
-        public Form2()
+        public CreateAccount()
         {
             InitializeComponent();
         }

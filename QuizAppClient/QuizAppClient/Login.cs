@@ -20,7 +20,7 @@ namespace QuizAppClient
 
         private void Login_Load(object sender, EventArgs e)
         {
-            string IniPath = @"..\..\Settings\Ini.txt";
+            string IniPath = @"..\..\Settings\Ini.ini";
             IniFileService iniFileService = new IniFileService(IniPath);
             if(iniFileService.iniData == null)
             {
@@ -28,6 +28,13 @@ namespace QuizAppClient
                 buttonLogin.Enabled = false;
                 labelCreateAccount.Enabled = false;
             }
+        }
+
+        private void labelCreateAccount_Click(object sender, EventArgs e)
+        {
+            var createAccount = new CreateAccount();
+            createAccount.ShowDialog();
+
         }
     }
 }

@@ -107,11 +107,12 @@ namespace QuizAppClient
             // 
             this.labelCreateAccount.AutoSize = true;
             this.labelCreateAccount.Font = new System.Drawing.Font("MS UI Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.labelCreateAccount.Location = new System.Drawing.Point(214, 468);
+            this.labelCreateAccount.Location = new System.Drawing.Point(218, 473);
             this.labelCreateAccount.Name = "labelCreateAccount";
             this.labelCreateAccount.Size = new System.Drawing.Size(199, 28);
             this.labelCreateAccount.TabIndex = 7;
             this.labelCreateAccount.Text = "Create Account";
+            this.labelCreateAccount.Click += new System.EventHandler(this.labelCreateAccount_Click);
             // 
             // Login
             // 

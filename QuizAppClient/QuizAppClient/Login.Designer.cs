@@ -35,8 +35,8 @@ namespace QuizAppClient
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
+            this.buttonLogin = new System.Windows.Forms.Button();
+            this.labelCreateAccount = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -93,33 +93,33 @@ namespace QuizAppClient
             this.textBox2.Size = new System.Drawing.Size(268, 22);
             this.textBox2.TabIndex = 5;
             // 
-            // button1
+            // buttonLogin
             // 
-            this.button1.Font = new System.Drawing.Font("MS UI Gothic", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(254, 367);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 53);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonLogin.Font = new System.Drawing.Font("MS UI Gothic", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.buttonLogin.Location = new System.Drawing.Point(254, 367);
+            this.buttonLogin.Name = "buttonLogin";
+            this.buttonLogin.Size = new System.Drawing.Size(122, 53);
+            this.buttonLogin.TabIndex = 6;
+            this.buttonLogin.Text = "Login";
+            this.buttonLogin.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // labelCreateAccount
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("MS UI Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label5.Location = new System.Drawing.Point(214, 468);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(199, 28);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Create Account";
+            this.labelCreateAccount.AutoSize = true;
+            this.labelCreateAccount.Font = new System.Drawing.Font("MS UI Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.labelCreateAccount.Location = new System.Drawing.Point(214, 468);
+            this.labelCreateAccount.Name = "labelCreateAccount";
+            this.labelCreateAccount.Size = new System.Drawing.Size(199, 28);
+            this.labelCreateAccount.TabIndex = 7;
+            this.labelCreateAccount.Text = "Create Account";
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(682, 580);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.labelCreateAccount);
+            this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);
@@ -142,8 +142,8 @@ namespace QuizAppClient
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button buttonLogin;
+        private System.Windows.Forms.Label labelCreateAccount;
     }
 }
 

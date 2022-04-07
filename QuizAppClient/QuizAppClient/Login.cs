@@ -20,8 +20,14 @@ namespace QuizAppClient
 
         private void Login_Load(object sender, EventArgs e)
         {
-            string IniPath = @"..\..\Settings\Ini.ini";
+            string IniPath = @"..\..\Settings\Ini.txt";
             IniFileService iniFileService = new IniFileService(IniPath);
+            if(iniFileService.iniData == null)
+            {
+                MessageBox.Show("IniFileを読み込めませんでした");
+                buttonLogin.Enabled = false;
+                labelCreateAccount.Enabled = false;
+            }
         }
     }
 }

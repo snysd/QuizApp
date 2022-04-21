@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using QuizAppClient.Models;
 
 namespace QuizAppClient
 {
@@ -21,7 +22,7 @@ namespace QuizAppClient
             InitializeComponent();
         }
 
-        private void buttonLogin_Click(object sender, EventArgs e)
+        private void buttonCreateAccount_Click(object sender, EventArgs e)
         {
             if (textBoxUserName.Text == "") MessageBox.Show("名前を入力してください。","エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             if (userService.CheckAccountExist(textBoxUserName.Text))
@@ -32,21 +33,40 @@ namespace QuizAppClient
                     {
                         if (textBoxPassword.Text.Length >= 4 && textBoxPassword.Text.Length <= 8)
                         {
-
+                            if (textBoxPassword.Text == textBoxConfirmPassword.Text)
+                            {
+                                User user = new User();
+                                user.userName = textBoxUserName.Text;
+                                user.password = textBoxPassword.Text;
+                                if( userService.CreateAccount(user) )
+                                {
+                                    // UserServiceでユーザの追加が成功
+                                    this.Close();
+                                }
+                                else
+                                {
+                                    // UserServiceでユーザの追加が失敗
+                                    return;
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("確認用パスワードが異なっています。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("パスワードは4文字以上8文字以内にしてください", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("パスワードは4文字以上8文字以内で入力してください。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     else
                     {
-                        MessageBox.Show("パスワードは英数混合にしてください", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("パスワードは英数混合で入力してください。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("パスワードは半角にしてください", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("パスワードは半角で入力してください。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }

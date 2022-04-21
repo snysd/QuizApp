@@ -29,7 +29,7 @@ namespace QuizAppClient
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonLogin = new System.Windows.Forms.Button();
+            this.buttonCreateAccount = new System.Windows.Forms.Button();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.textBoxUserName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,16 +40,16 @@ namespace QuizAppClient
             this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // buttonLogin
+            // buttonCreateAccount
             // 
-            this.buttonLogin.Font = new System.Drawing.Font("MS UI Gothic", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.buttonLogin.Location = new System.Drawing.Point(135, 477);
-            this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(368, 53);
-            this.buttonLogin.TabIndex = 13;
-            this.buttonLogin.Text = "Create an Account";
-            this.buttonLogin.UseVisualStyleBackColor = true;
-            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
+            this.buttonCreateAccount.Font = new System.Drawing.Font("MS UI Gothic", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.buttonCreateAccount.Location = new System.Drawing.Point(135, 477);
+            this.buttonCreateAccount.Name = "buttonCreateAccount";
+            this.buttonCreateAccount.Size = new System.Drawing.Size(368, 53);
+            this.buttonCreateAccount.TabIndex = 13;
+            this.buttonCreateAccount.Text = "Create an Account";
+            this.buttonCreateAccount.UseVisualStyleBackColor = true;
+            this.buttonCreateAccount.Click += new System.EventHandler(this.buttonCreateAccount_Click);
             // 
             // textBoxPassword
             // 
@@ -129,7 +129,7 @@ namespace QuizAppClient
             this.ClientSize = new System.Drawing.Size(669, 575);
             this.Controls.Add(this.textBoxConfirmPassword);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.buttonLogin);
+            this.Controls.Add(this.buttonCreateAccount);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxUserName);
             this.Controls.Add(this.label4);
@@ -145,7 +145,7 @@ namespace QuizAppClient
 
         #endregion
 
-        private System.Windows.Forms.Button buttonLogin;
+        private System.Windows.Forms.Button buttonCreateAccount;
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.TextBox textBoxUserName;
         private System.Windows.Forms.Label label4;

@@ -33,8 +33,21 @@ namespace QuizAppClient
         private void labelCreateAccount_Click(object sender, EventArgs e)
         {
             var createAccount = new CreateAccount();
-            createAccount.ShowDialog();
+            //createAccount.FormClosed += createAccountFormClosed;
+            createAccount.VisibleChanged += (closedSender, closedE) =>
+            {
+                if (!createAccount.Visible)
+                {
+                    
+                    this.Hide();
 
+                    Home home = new Home();
+
+                    home.ShowDialog();
+
+                }
+            };
+            createAccount.ShowDialog();
         }
     }
 }

@@ -32,6 +32,7 @@ namespace QuizAppClient
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.labelTimer = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -58,17 +59,28 @@ namespace QuizAppClient
             // 
             this.labelTimer.AutoSize = true;
             this.labelTimer.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.labelTimer.Location = new System.Drawing.Point(39, 29);
+            this.labelTimer.Location = new System.Drawing.Point(96, 45);
             this.labelTimer.Name = "labelTimer";
-            this.labelTimer.Size = new System.Drawing.Size(93, 24);
+            this.labelTimer.Size = new System.Drawing.Size(54, 24);
             this.labelTimer.TabIndex = 4;
-            this.labelTimer.Text = "残り　　：";
+            this.labelTimer.Text = "　　：";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label3.Location = new System.Drawing.Point(39, 45);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 24);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "残り";
             // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(735, 452);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.labelTimer);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -85,5 +97,6 @@ namespace QuizAppClient
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelTimer;
+        private System.Windows.Forms.Label label3;
     }
 }

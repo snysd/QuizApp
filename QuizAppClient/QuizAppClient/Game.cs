@@ -13,6 +13,7 @@ namespace QuizAppClient
 {
     public partial class Game : Form
     {
+        int currentSeconds = 300;
 
         public Game()
         {
@@ -28,7 +29,12 @@ namespace QuizAppClient
 
         public void UpdateTimer(object sender, EventArgs e)
         {
-            this.BeginInvoke((Action)(() => { this.labelTimer.Visible = !this.labelTimer.Visible; }));
+            this.BeginInvoke((Action)(() => {
+                currentSeconds--;
+                int minutes = currentSeconds / 60;
+                int seconds = currentSeconds % 60;
+                labelTimer.Text = $"{minutes} : {seconds}";                
+            }));
         }
 
     }

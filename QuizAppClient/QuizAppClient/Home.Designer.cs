@@ -67,7 +67,7 @@ namespace QuizAppClient
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(176, 240);
+            this.button1.Location = new System.Drawing.Point(210, 197);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 5;

@@ -10,7 +10,7 @@ namespace QuizAppClient.Services
     public class UserService
     {
         public User currentLoginUser;
-        public bool CheckAccountExist(string userName)
+        public bool CheckAccountExistName(string userName)
         {
             // TODO バックエンド問い合わせ
             // ユーザーが存在していればfalse、なければtrue
@@ -24,6 +24,18 @@ namespace QuizAppClient.Services
             // 通信に失敗した場合の処理
             return true;
         }
+
+        public bool CheckAccountExist(string userName,string userPassword)
+        {
+            // TODO: バックエンド問い合わせ
+            // ユーザー名で問い合わせるとユーザオブジェクトが帰ってくるのでパスワードを照合する。
+
+            currentLoginUser = new User();
+            currentLoginUser.userName = userName;
+            currentLoginUser.password = userPassword;
+            return true;
+        }
+
 
 
     }

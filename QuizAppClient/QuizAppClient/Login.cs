@@ -38,16 +38,27 @@ namespace QuizAppClient
             {
                 if (!createAccount.Visible)
                 {
-                    
-                    this.Hide();
-
                     Home home = new Home();
-
                     home.ShowDialog();
-
                 }
             };
+            this.Hide();
             createAccount.ShowDialog();
+        }
+
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+            if (textBoxUserName.Text == "") MessageBox.Show("名前を入力してください。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if (textBoxPassword.Text == "") MessageBox.Show("パスワードを入力してください。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if (StockInstance.userService.CheckAccountExist(textBoxUserName.Text, textBoxPassword.Text))
+            {
+                Home home = new Home();
+                home.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("入力情報が誤っています。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -15,7 +15,6 @@ namespace QuizAppClient
 {
     public partial class CreateAccount : Form
     {
-        UserService userService = new UserService();
 
         public CreateAccount()
         {
@@ -25,7 +24,7 @@ namespace QuizAppClient
         private void buttonCreateAccount_Click(object sender, EventArgs e)
         {
             if (textBoxUserName.Text == "") MessageBox.Show("名前を入力してください。","エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            if (userService.CheckAccountExist(textBoxUserName.Text))
+            if (StockInstance.userService.CheckAccountExistName(textBoxUserName.Text))
             {
                 if (!Zenkaku_Check(textBoxPassword.Text))
                 {
@@ -38,7 +37,7 @@ namespace QuizAppClient
                                 User user = new User();
                                 user.userName = textBoxUserName.Text;
                                 user.password = textBoxPassword.Text;
-                                if( userService.CreateAccount(user) )
+                                if( StockInstance.userService.CreateAccount(user) )
                                 {
                                     // UserServiceでユーザの追加が成功
                                     this.Close();
